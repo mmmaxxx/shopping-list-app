@@ -1,0 +1,12 @@
+<div class="list-detail" *ngIf="listData$ | async">
+
+  <app-search (newIngredient)="newIngredient($event)"></app-search>
+  <div class="ingredient-count">
+    {{ activeIngredientList }}
+  </div>
+  <app-shopping-list-item
+    *ngFor="let ingredient of (ingredientList$ | async)"
+    [ingredient]="ingredient"
+    (click)="tickIngredient(ingredient)"
+  ></app-shopping-list-item>
+</div>

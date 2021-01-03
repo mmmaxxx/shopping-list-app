@@ -1,0 +1,10 @@
+<div class="item">
+  <div class="title"><ng-container *ngIf="ingredient.tickedOff">🙏</ng-container><span [ngClass]="{tickedOff: ingredient.tickedOff}">{{ ingredient.name }}</span></div>
+  <div class="measure">
+    <div class="quantity">{{ ingredient.quantity }}</div>
+    <div class="unit">{{ ingredient.unit }}</div>
+  </div>
+  <div class="delete" *ngIf="ingredient.tickedOff">
+    <button (click)="deleteIngredient(ingredient)" class="delete-button">Delete</button>
+  </div>
+</div>

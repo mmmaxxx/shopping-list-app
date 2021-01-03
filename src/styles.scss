@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: Playfair Display;
+  font-weight: normal;
+  src: url(/assets/font/Playfair/PlayfairDisplay-Medium.ttf);
+}
+
+@font-face {
+  font-family: Playfair Display;
+  font-weight: bold;
+  src: url(/assets/font/Playfair/PlayfairDisplay-Bold.ttf);
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}

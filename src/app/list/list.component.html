@@ -1,0 +1,3 @@
+<div class="listing" [ngClass]="{current: current}">
+  <div class="title">{{ listTitle }}</div> <button class="delete-list" *ngIf="current" (click)="deleteList()">DELETE</button>
+</div>
